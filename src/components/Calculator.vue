@@ -24,7 +24,7 @@
 
         <div @click="append('0')" class="zero btn">0</div>
         <div @click="dot" class="btn">.</div>
-        <div @click="equals" class="btn btn-special">=</div>
+        <div @click="equals" class="btn btn-special equals">=</div>
     </div>
 </template>
 
@@ -50,7 +50,7 @@
                 this.current = `${parseFloat(this.current) / 100}`
             },
             append(num) {
-                if (this.operatorClicked){
+                if (this.operatorClicked) {
                     this.current = '';
                     this.operatorClicked = false;
                 }
@@ -82,7 +82,7 @@
                 this.setPrevious()
             },
             equals() {
-                this.current = `${this.operator(parseFloat(this.current), parseFloat(this.previous))}`;
+                this.current = `${this.operator(parseFloat(this.previous), parseFloat(this.current))}`;
                 this.previous = null
             }
         }
@@ -91,6 +91,7 @@
 
 <style scoped>
     .calculator {
+        font-family: Helvetica;
         width: 300px;
         margin: 0 auto;
         font-weight: lighter;
@@ -101,15 +102,19 @@
     }
 
     .display {
+        border-radius: 10px 10px 0 0;
         background-color: #333;
         grid-column: 1 / 5;
         color: #fff;
         text-align: right;
         padding-right: 10px;
     }
-
+    .equals{
+        border-radius: 0 0 10px 0;
+    }
     .zero {
         grid-column: 1 / 3;
+        border-radius: 0 0 0 10px;
     }
 
     .btn {
