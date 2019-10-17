@@ -1,6 +1,11 @@
-# calculator
+# Calculator
 
-> A Vue.js project
+> A Vue.js project by [freecodecamp](https://www.freecodecamp.org/)
+
+Great way to refresh css grid skills and Vue.js events
+
+## Look
+<img src="/src/assets/app.png" width="350px"/>
 
 ## Build Setup
 
