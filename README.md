@@ -5,7 +5,7 @@
 Great way to refresh css grid skills and Vue.js events
 
 ## Look
-<img src="/src/assets/app.png" width="350px"/>
+<img src="/src/assets/app.png" width="650px"/>
 
 ## Build Setup
 
